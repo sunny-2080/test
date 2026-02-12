@@ -1,0 +1,13 @@
+# 忽略 node_modules 目录（如果用 npm 管理依赖）
+node_modules/
+
+# 忽略项目配置文件（如有）
+project.private.config.json
+
+# 忽略系统文件
+.DS_Store
+Thumbs.db
+
+# 忽略 IDE 或编辑器配置文件
+.vscode/
+.idea/

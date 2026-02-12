@@ -1,0 +1,36 @@
+<view class="container">
+  <view class="card">
+    <view class="section">
+      <text class="title">✍️ 选择练习字</text>
+      <picker range="{{charList}}" value="{{charIndex}}" bindchange="bindCharChange">
+        <view class="picker">
+          <text>当前选择：{{selectedChar.name}} ({{selectedChar.desc}})</text>
+          <text class="arrow">▼</text>
+        </view>
+      </picker>
+      <view class="standard-char">
+        <image src="{{selectedChar.image}}" mode="widthFix"></image>
+        <text>标准字: {{selectedChar.name}}</text>
+      </view>
+    </view>
+
+    <view class="section">
+      <text class="title">📷 上传你的字迹</text>
+      <view class="upload-area" bindtap="chooseImage">
+        <image wx:if="{{tempImagePath}}" src="{{tempImagePath}}" class="preview-image"></image>
+        <view wx:else class="upload-placeholder">
+          <text class="icon">＋</text>
+          <text>点击拍照/上传</text>
+          <text class="hint">建议拍摄清晰特写</text>
+        </view>
+      </view>
+    </view>
+
+    <button class="primary-btn" bindtap="analyze" disabled="{{!tempImagePath}}">开始AI分析</button>
+  </view>
+
+  <view class="tip-box">
+    <text class="tip-title">提示</text>
+    <text class="tip-content">此为演示版本。连接真实API需替换 mockCallAPI 函数。</text>
+  </view>
+</view>

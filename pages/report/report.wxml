@@ -1,0 +1,40 @@
+<view class="report-container">
+  <view class="header">
+    <text class="char-display">你写的“{{analyzedChar}}”字</text>
+    <text class="score-label">综合得分</text>
+    <view class="score-circle">
+      <text class="score-value">{{finalScore}}</text>
+    </view>
+    <text class="score-comment">{{scoreComment}}</text>
+  </view>
+
+  <view class="section">
+    <text class="section-title">分维度评估</text>
+    <view class="dimensions">
+      <view class="dimension-item" wx:for="{{dimensions}}" wx:key="name">
+        <view class="dimension-header">
+          <text class="dimension-name">{{item.name}}</text>
+          <text class="dimension-score">{{item.score}}分</text>
+        </view>
+        <view class="progress-bar">
+            <view class="progress-fill" style="{{ 'width:' + item.score + '%;background:' + item.color + ';' }}"></view>
+        </view>
+      </view>
+    </view>
+  </view>
+
+  <view class="section">
+    <text class="section-title">改进建议</text>
+    <view class="feedbacks">
+      <view class="feedback-item" wx:for="{{feedbacks}}" wx:key="title">
+        <text class="feedback-index">{{index + 1}}.</text>
+        <view class="feedback-content">
+          <text class="feedback-title">{{item.title}}</text>
+          <text class="feedback-desc">{{item.content}}</text>
+        </view>
+      </view>
+    </view>
+  </view>
+
+  <button class="new-btn" bindtap="newAnalysis">分析新字迹</button>
+</view>

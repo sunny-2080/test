@@ -1,0 +1,21 @@
+.report-container { padding: 30rpx; min-height: 100vh; background: linear-gradient(180deg, #f0f9ff 0%, #ffffff 100%); }
+.header { text-align: center; padding: 40rpx 0; }
+.char-display { font-size: 36rpx; color: #333; display: block; }
+.score-label { font-size: 28rpx; color: #666; display: block; margin: 20rpx 0; }
+.score-circle { width: 250rpx; height: 250rpx; border-radius: 50%; background: conic-gradient(#36a1d6 0% {{finalScore}}%, #e6f7ff {{finalScore}}% 100%); margin: 30rpx auto; display: flex; align-items: center; justify-content: center; }
+.score-value { font-size: 80rpx; font-weight: bold; color: #2d3748; }
+.score-comment { font-size: 28rpx; color: #718096; display: block; margin-top: 20rpx; }
+.section { margin: 60rpx 0; }
+.section-title { font-size: 36rpx; font-weight: bold; color: #4a5568; display: block; margin-bottom: 40rpx; }
+.dimension-item { margin-bottom: 40rpx; }
+.dimension-header { display: flex; justify-content: space-between; margin-bottom: 20rpx; }
+.dimension-name { font-size: 30rpx; color: #333; }
+.dimension-score { font-size: 32rpx; font-weight: bold; color: #2d3748; }
+.progress-bar { height: 20rpx; background: #e2e8f0; border-radius: 10rpx; overflow: hidden; }
+.progress-fill { height: 100%; border-radius: 10rpx; }
+.feedback-item { display: flex; margin-bottom: 40rpx; }
+.feedback-index { font-size: 36rpx; font-weight: bold; color: #36a1d6; margin-right: 20rpx; }
+.feedback-content { flex: 1; }
+.feedback-title { font-size: 30rpx; font-weight: bold; color: #333; display: block; margin-bottom: 10rpx; }
+.feedback-desc { font-size: 28rpx; color: #666; line-height: 1.4; }
+.new-btn { background: #edf2f7; color: #4a5568; border-radius: 16rpx; padding: 30rpx; font-size: 32rpx; font-weight: bold; border: none; margin-top: 40rpx; }
